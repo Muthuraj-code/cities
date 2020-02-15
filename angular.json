@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "indianCities": {
@@ -24,18 +24,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "../indianCities/src/styles.css",
+              "../indianCities/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -44,8 +43,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -119,6 +117,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "indianCities"
+    }
+  },
+  "defaultProject": "indianCities",
+  "cli": {
+    "analytics": "3b69e639-3f99-4950-8cb8-6f534cdf6a74"
+  }
 }
